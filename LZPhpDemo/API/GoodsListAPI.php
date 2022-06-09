@@ -1,7 +1,7 @@
 <?php
 include '../Server/db.php';
 include '../Server/ResponseJson.php';
-header('Access-Control-Allow-Origin:http://localhost:3000'); // *代表允许任何网址请求
+header('Access-Control-Allow-Origin:*'); // *代表允许任何网址请求
 
 //echo  $_GET;
 //var_dump($_GET);

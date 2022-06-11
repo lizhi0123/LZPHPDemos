@@ -26,9 +26,9 @@ return [
             // 服务器地址
             'hostname'        => env('database.hostname', '127.0.0.1'),
             // 数据库名
-            'database'        => env('database.database', 'LZPhpDemo'),
+            'database'        => env('database.database', ''),
             // 用户名
-            'username'        => env('database.username', 'root'),
+            'username'        => env('database.username', ''),
             // 密码
             'password'        => env('database.password', ''),
             // 端口

@@ -1,5 +1,5 @@
 <?php
-declare (strict_types = 1);
+declare (strict_types=1);
 
 namespace app\controller;
 
@@ -17,8 +17,12 @@ class User extends Base
     public function index()
     {
 //        $data = UserModel::select();
-        $data = UserModel::field('id,username,userpic,phone,createtime') -> select();
-        return  $this->create($data);
+//        $data = UserModel::field('id,username,userpic,phone,createtime') -> select();
+
+        $data = UserModel::field('id,username,userpic,phone,createtime')
+            ->page($this->page, $this->pageSize)
+            ->select();
+        return $this->create($data);
 //        return  UserModel::select();
 //        return  "123";
     }
@@ -27,7 +31,7 @@ class User extends Base
     /**
      * 保存新建的资源
      *
-     * @param  \think\Request  $request
+     * @param \think\Request $request
      * @return \think\Response
      */
     public function save(Request $request)
@@ -38,7 +42,7 @@ class User extends Base
     /**
      * 显示指定的资源
      *
-     * @param  int  $id
+     * @param int $id
      * @return \think\Response
      */
     public function read($id)
@@ -49,8 +53,8 @@ class User extends Base
     /**
      * 保存更新的资源
      *
-     * @param  \think\Request  $request
-     * @param  int  $id
+     * @param \think\Request $request
+     * @param int $id
      * @return \think\Response
      */
     public function update(Request $request, $id)
@@ -61,7 +65,7 @@ class User extends Base
     /**
      * 删除指定资源
      *
-     * @param  int  $id
+     * @param int $id
      * @return \think\Response
      */
     public function delete($id)

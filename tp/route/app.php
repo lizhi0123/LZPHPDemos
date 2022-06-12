@@ -16,4 +16,4 @@ Route::get('think', function () {
 
 Route::get('hello/:name', 'index/hello');
 Route::resource('user','user');
-Route::resource('user2','api/v1/user2');
+Route::resource('user2','api/v1/User2');

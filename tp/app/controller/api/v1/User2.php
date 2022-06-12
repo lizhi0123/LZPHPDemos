@@ -1,13 +1,11 @@
 <?php
 declare (strict_types = 1);
 
-namespace app\controller;
+namespace app\controller\api\v1;
 
 use think\Request;
-use app\model\User as UserModel;
-use think\Response;
 
-class User extends Base
+class User2
 {
     /**
      * 显示资源列表
@@ -16,13 +14,9 @@ class User extends Base
      */
     public function index()
     {
-//        $data = UserModel::select();
-        $data = UserModel::field('id,username,userpic,phone,createtime') -> select();
-        return  $this->create($data);
-//        return  UserModel::select();
-//        return  "123";
+        //
+        return  "User 2";
     }
-
 
     /**
      * 保存新建的资源
